@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ahmed Raafat — Backend .NET Developer. Building high-performance REST APIs, Clean Architecture, and resilient backend systems.">
+  <meta name="author" content="Ahmed Raafat">
+  <meta name="theme-color" content="#09090B">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ahmadraafat22.github.io">
+
+  <!-- OpenGraph / Social Metadata -->
+  <meta property="og:title" content="Ahmed Raafat — Backend .NET Developer">
+  <meta property="og:description" content="I build scalable REST APIs, CQRS pipelines, and backend systems with ASP.NET Core &amp; Clean Architecture.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/ahmadraafat22">
+
+  <title>Ahmed Raafat — Backend .NET Developer</title>
+
+  <!-- Fonts preconnect & loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient background glow effects -->
+  <div class="bg-ambient-glow glow-hero" aria-hidden="true"></div>
+  <div class="bg-ambient-glow glow-architecture" aria-hidden="true"></div>
+  <div class="bg-ambient-glow glow-contact" aria-hidden="true"></div>
+
+  <!-- ==================== STICKY NAVBAR ==================== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand-group">
+        <a href="#hero" class="nav-logo" aria-label="Ahmed Raafat Home">AR<span class="nav-dot">.</span></a>
+        <span class="nav-badge-role">.NET / Backend</span>
+      </div>
+      
+      <div class="nav-links">
+        <a href="#about" class="nav-link">about</a>
+        <a href="#skills" class="nav-link">skills</a>
+        <a href="#architecture" class="nav-link">architecture</a>
+        <a href="#projects" class="nav-link">projects</a>
+        <a href="#journey" class="nav-link">journey</a>
+        <a href="#activity" class="nav-link">activity</a>
+        <a href="#contact" class="nav-link nav-cta-btn">contact</a>
+        <a href="https://github.com/ahmadraafat22" target="_blank" rel="noopener noreferrer" class="nav-cta-btn" aria-label="GitHub Profile">
+          <span>GitHub</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ==================== HERO SECTION (DEVELOPER WORKSTATION) ==================== -->
+    <section id="hero" class="hero">
+      <div class="hero-grid">
+        
+        <!-- Left: Headline & Bio -->
+        <div class="hero-content">
+          <div class="availability-badge">
+            <span class="availability-dot"></span>
+            <span>Available for backend roles &amp; collaborations</span>
+          </div>
+
+          <div class="hero-label">// backend .NET developer</div>
+          
+          <h1 class="hero-title">
+            <span class="hero-name">Ahmed Raafat</span><span class="cursor" aria-hidden="true">▌</span>
+          </h1>
+
+          <p class="hero-description">
+            I build scalable REST APIs and backend systems that are fast, clean, and built to last.
+            Specialized in modular CQRS pipelines, robust database design, and production-grade software architecture.
+          </p>
+
+          <div class="hero-highlight-stack">
+            <span class="hero-mini-pill">C#</span>
+            <span class="hero-mini-pill">.NET 8</span>
+            <span class="hero-mini-pill">ASP.NET Core</span>
+            <span class="hero-mini-pill">Clean Architecture</span>
+            <span class="hero-mini-pill">CQRS · MediatR</span>
+            <span class="hero-mini-pill">EF Core</span>
+            <span class="hero-mini-pill">SQL Server</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="btn-view-projects">
+              <span>View Projects</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <a href="https://github.com/ahmadraafat22" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="btn-hero-github">
+              <span>GitHub ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Code Workstation IDE Card -->
+        <div class="hero-workstation">
+          <div class="code-window-header">
+            <div class="window-controls">
+              <span class="control-dot red"></span>
+              <span class="control-dot yellow"></span>
+              <span class="control-dot green"></span>
+            </div>
+            <div class="code-tabs">
+              <button class="code-tab active" data-tab="tab-controller">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>OrderController.cs</span>
+              </button>
+              <button class="code-tab" data-tab="tab-architecture">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <span>Architecture.json</span>
+              </button>
+              <button class="code-tab" data-tab="tab-terminal">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                <span>Terminal</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="code-window-body">
+            <!-- Tab 1: C# Controller -->
+            <div class="code-tab-content active" id="tab-controller">
+              <pre><code><span class="c-com">// ASP.NET Core 8 &bull; Clean Architecture CQRS Endpoint</span>
+[<span class="c-type">ApiController</span>]
+[<span class="c-type">Route</span>(<span class="c-str">"api/v1/[controller]"</span>)]
+[<span class="c-type">Authorize</span>]
+<span class="c-kw">public class</span> <span class="c-class">OrdersController</span> : <span class="c-class">BaseApiController</span>
+{
+    [<span class="c-type">HttpPost</span>]
+    [<span class="c-type">ProducesResponseType</span>(<span class="c-kw">typeof</span>(<span class="c-type">Guid</span>), <span class="c-num">201</span>)]
+    <span class="c-kw">public async</span> <span class="c-type">Task</span>&lt;<span class="c-type">IActionResult</span>&gt; <span class="c-fn">CreateOrder</span>(
+        [<span class="c-type">FromBody</span>] <span class="c-type">CreateOrderCommand</span> command)
+    {
+        <span class="c-kw">var</span> orderId = <span class="c-kw">await</span> Mediator.<span class="c-fn">Send</span>(command);
+        <span class="c-kw">return</span> <span class="c-fn">CreatedAtAction</span>(<span class="c-kw">nameof</span>(GetById), 
+            <span class="c-kw">new</span> { id = orderId }, orderId);
+    }
+}</code></pre>
+            </div>
+
+            <!-- Tab 2: Architecture JSON -->
+            <div class="code-tab-content" id="tab-architecture">
+              <pre><code>{
+  <span class="c-str">"system"</span>: <span class="c-str">"NexusERP Backend"</span>,
+  <span class="c-str">"framework"</span>: <span class="c-str">"ASP.NET Core 8"</span>,
+  <span class="c-str">"patterns"</span>: [
+    <span class="c-str">"Clean Architecture"</span>,
+    <span class="c-str">"CQRS with MediatR"</span>,
+    <span class="c-str">"Repository &amp; UnitOfWork"</span>
+  ],
+  <span class="c-str">"security"</span>: <span class="c-str">"JWT Bearer + Role Authorization"</span>,
+  <span class="c-str">"database"</span>: <span class="c-str">"SQL Server &bull; EF Core Migrations"</span>,
+  <span class="c-str">"middleware"</span>: <span class="c-str">"Global Exception &bull; Request Logging"</span>
+}</code></pre>
+            </div>
+
+            <!-- Tab 3: Interactive Terminal -->
+            <div class="code-tab-content" id="tab-terminal">
+              <pre><code><span class="c-com">$ dotnet run --project NexusERP.API</span>
+<span class="c-str">[INFO]</span> Building dependency tree &bull; Clean Architecture...
+<span class="c-str">[INFO]</span> Applying EF Core migrations &bull; Database Up to date
+<span class="c-str">[INFO]</span> MediatR pipeline registered 28 handlers
+<span class="c-str">[INFO]</span> Server listening on <span class="c-kw">https://localhost:7001</span>
+<span class="c-com">----------------------------------------------------</span>
+<span class="c-kw">HTTP POST</span> /api/v1/orders &bull; <span class="c-str">201 Created</span> (14ms)
+<span class="c-kw">HTTP GET</span>  /api/v1/inventory &bull; <span class="c-str">200 OK</span> (8ms)</code></pre>
+            </div>
+          </div>
+
+          <div class="workstation-footer">
+            <div class="status-indicator">
+              <span class="status-dot-mini"></span>
+              <span>API Gateway Healthy · 99.9% Uptime</span>
+            </div>
+            <span>.NET 8.0 CLR</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="reveal-on-scroll">
+      <header class="section-header">
+        <span class="section-label">// about</span>
+        <h2 class="section-title">Engineering with Purpose &amp; Reliability</h2>
+        <p class="section-subtitle">Dedicated to building maintainable, high-throughput backend services and structured enterprise software.</p>
+      </header>
+      
+      <div class="about-grid">
+        <div>
+          <p class="about-main-text">
+            I am a third-year <strong>Computer Science &amp; Artificial Intelligence student at Minia National University</strong> (AI Major) with a disciplined dedication to backend engineering. Rather than treating code as merely syntax, I focus heavily on <strong>architectural boundaries, relational database integrity, and high-performance APIs</strong> that teams can rely on.
+          </p>
+          <p class="about-main-text">
+            Having built production-grade ERP systems from scratch, solved <strong>100+ competitive programming algorithmic problems</strong>, and completed <strong>170 hours of intensive .NET specialization</strong>, I write predictable, defensive, and clean C# code.
+          </p>
+        </div>
+
+        <div class="about-focus-card">
+          <div class="focus-card-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            <span>Core Engineering Philosophy</span>
+          </div>
+          <ul class="focus-points-list">
+            <li class="focus-point-item">
+              <span class="focus-icon">⚡</span>
+              <div><strong>Clean Separation of Concerns:</strong> Explicit isolation between Domain, Application, Infrastructure, and API layers.</div>
+            </li>
+            <li class="focus-point-item">
+              <span class="focus-icon">🛡️</span>
+              <div><strong>Defensive Validation &amp; Auth:</strong> FluentValidation pipelines, strict JWT token validation, and global exception handlers.</div>
+            </li>
+            <li class="focus-point-item">
+              <span class="focus-icon">📊</span>
+              <div><strong>High-Performance Data Layer:</strong> Code-First migrations, indexed relational design, and optimized LINQ queries with EF Core.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Stat Row -->
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-number">170+ hrs</div>
+          <div class="stat-label">Intensive .NET Diploma</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">CP Problems Solved</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Production Architectures</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3rd Year</div>
+          <div class="stat-label">CS &amp; AI (AI Major)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS & TECHNOLOGIES SECTION ==================== -->
+    <section id="skills" class="reveal-on-scroll">
+      <header class="section-header">
+        <span class="section-label">// skills</span>
+        <h2 class="section-title">Technical Arsenal &amp; Ecosystem</h2>
+        <p class="section-subtitle">A curated backend tech stack focused on stability, type-safety, and enterprise scalability.</p>
+      </header>
+
+      <div class="skills-categories-grid">
+        
+        <!-- Category 1: Backend Core -->
+        <div class="skill-category-block">
+          <div class="skill-cat-header">
+            <span class="skill-cat-title">Backend &amp; Frameworks</span>
+            <span class="skill-cat-badge">Core Engine</span>
+          </div>
+          <div class="skills-cards-list">
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#512BD4;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zm-8 8.8l8 4 8-4V17l-8 4-8-4v-6.2z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">C#</span>
+                <span class="tech-tag">Language</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#512BD4;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">.NET 8</span>
+                <span class="tech-tag">Platform</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#2EB9DF;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L4 9v12h16V9l-8-6zm0 2.5l6 4.5v9H6v-9l6-4.5z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">ASP.NET Core</span>
+                <span class="tech-tag">Web Framework</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#10B981;" viewBox="0 0 24 24"><path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">Web API</span>
+                <span class="tech-tag">REST Endpoints</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#F59E0B;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">JWT Auth</span>
+                <span class="tech-tag">Bearer Tokens</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#2EB9DF;" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">FluentValidation</span>
+                <span class="tech-tag">Rule Engine</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Database & Data Access -->
+        <div class="skill-category-block">
+          <div class="skill-cat-header">
+            <span class="skill-cat-title">Database &amp; Data Access</span>
+            <span class="skill-cat-badge">Persistence</span>
+          </div>
+          <div class="skills-cards-list">
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#EF4444;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 4.02 2 6.5v11C2 19.98 6.48 22 12 22s10-2.02 10-4.5v-11C22 4.02 17.52 2 12 2zm0 2c4.42 0 8 1.34 8 2.5S16.42 9 12 9 4 7.66 4 6.5 7.58 4 12 4z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">SQL Server</span>
+                <span class="tech-tag">RDBMS</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#60A5FA;" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16v16H4V4zm2 2v12h12V6H6z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">EF Core</span>
+                <span class="tech-tag">ORM</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#10B981;" viewBox="0 0 24 24"><path fill="currentColor" d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">LINQ</span>
+                <span class="tech-tag">Query Syntax</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#F59E0B;" viewBox="0 0 24 24"><path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">Migrations</span>
+                <span class="tech-tag">Code First</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#2EB9DF;" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">DB Design</span>
+                <span class="tech-tag">Normalization</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#A855F7;" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.05.5-9 4.76-9 9.95 0 5.52 4.47 10 10 10 2.4 0 4.6-.84 6.32-2.25l-2.07-2.07c-1.22.84-2.7 1.32-4.25 1.32z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">Optimization</span>
+                <span class="tech-tag">Index &amp; Queries</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Architecture & Patterns -->
+        <div class="skill-category-block">
+          <div class="skill-cat-header">
+            <span class="skill-cat-title">Architecture &amp; Patterns</span>
+            <span class="skill-cat-badge">Design Systems</span>
+          </div>
+          <div class="skills-cards-list">
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#2EB9DF;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">Clean Arch</span>
+                <span class="tech-tag">Layered Design</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#10B981;" viewBox="0 0 24 24"><path fill="currentColor" d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">CQRS</span>
+                <span class="tech-tag">Command/Query</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#F59E0B;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-6h2v4h-2z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">MediatR</span>
+                <span class="tech-tag">Mediator Pattern</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#A855F7;" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">Repository</span>
+                <span class="tech-tag">Unit of Work</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#2EB9DF;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">SOLID</span>
+                <span class="tech-tag">OOP Principles</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#10B981;" viewBox="0 0 24 24"><path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">DI Engine</span>
+                <span class="tech-tag">IoC Container</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Tools & Exploring -->
+        <div class="skill-category-block">
+          <div class="skill-cat-header">
+            <span class="skill-cat-title">Tools &amp; Next Milestones</span>
+            <span class="skill-cat-badge">DevOps &amp; Tools</span>
+          </div>
+          <div class="skills-cards-list">
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#F05032;" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 10.9L13.1 2.4c-.6-.6-1.5-.6-2.1 0L8.7 4.7l2.8 2.8c.6-.2 1.3-.1 1.8.4.5.5.6 1.2.4 1.8l2.7 2.7c.6-.2 1.3-.1 1.8.4.8.8.8 2 0 2.8s-2 .8-2.8 0c-.6-.6-.7-1.4-.4-2.1L12.4 10v4.7c.3.1.5.3.7.5.8.8.8 2 0 2.8s-2 .8-2.8 0c-.8-.8-.8-2 0-2.8.2-.2.5-.4.8-.5V9.9c-.3-.1-.5-.3-.8-.5-.6-.6-.7-1.4-.4-2.1L7.2 4.5 2.4 9.3c-.6.6-.6 1.5 0 2.1l8.5 8.5c.6.6 1.5.6 2.1 0l8.6-8.6c.6-.6.6-1.4 0-2.4z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">Git</span>
+                <span class="tech-tag">Version Control</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#FAFAFA;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">GitHub</span>
+                <span class="tech-tag">CI/CD &amp; Repos</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#FF6C37;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">Postman</span>
+                <span class="tech-tag">API Testing</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <svg class="tech-icon-svg" style="color:#85EA2D;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">Swagger</span>
+                <span class="tech-tag">OpenAPI Docs</span>
+              </div>
+            </div>
+            <!-- Learning / WIP Badges -->
+            <div class="tech-card wip" title="Currently Exploring &bull; In Progress">
+              <svg class="tech-icon-svg" style="color:#2496ED;" viewBox="0 0 24 24"><path fill="currentColor" d="M13 8h-2v2h2V8zm0-3h-2v2h2V5zm-3 3H8v2h2V8zm0-3H8v2h2V5zm-3 3H5v2h2V8zm0-3H5v2h2V5zm9 3h-2v2h2V8zm0-3h-2v2h2V5zm3 3h-2v2h2V8z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">Docker (WIP)</span>
+                <span class="tech-tag">Containers</span>
+              </div>
+            </div>
+            <div class="tech-card wip" title="Currently Exploring &bull; In Progress">
+              <svg class="tech-icon-svg" style="color:#DC382D;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zm-8 8.8l8 4 8-4V17l-8 4-8-4v-6.2z"/></svg>
+              <div class="tech-card-info">
+                <span class="tech-name">Redis (WIP)</span>
+                <span class="tech-tag">Distributed Cache</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== BACKEND ARCHITECTURE SECTION ==================== -->
+    <section id="architecture" class="reveal-on-scroll">
+      <header class="section-header">
+        <span class="section-label">// architecture</span>
+        <h2 class="section-title">Clean Architecture &amp; Request Flow</h2>
+        <p class="section-subtitle">How requests travel through my backend pipelines from initial HTTP invocation to database commit.</p>
+      </header>
+
+      <div class="arch-container">
+        
+        <!-- Left: Interactive Flow Steps -->
+        <div class="arch-flow-diagram">
+          <div class="arch-step-card active" data-layer="layer-client">
+            <div class="arch-step-left">
+              <span class="arch-step-num">01</span>
+              <div>
+                <div class="arch-step-title">Client / External Consumer</div>
+                <div class="arch-step-badge">HTTP POST / GET · Bearer JWT</div>
+              </div>
+            </div>
+            <span>→</span>
+          </div>
+
+          <div class="arch-flow-arrow">↓</div>
+
+          <div class="arch-step-card" data-layer="layer-api">
+            <div class="arch-step-left">
+              <span class="arch-step-num">02</span>
+              <div>
+                <div class="arch-step-title">API &amp; Presentation Layer</div>
+                <div class="arch-step-badge">Controllers · Middleware · Auth</div>
+              </div>
+            </div>
+            <span>→</span>
+          </div>
+
+          <div class="arch-flow-arrow">↓</div>
+
+          <div class="arch-step-card" data-layer="layer-app">
+            <div class="arch-step-left">
+              <span class="arch-step-num">03</span>
+              <div>
+                <div class="arch-step-title">Application Layer (Core)</div>
+                <div class="arch-step-badge">MediatR CQRS · FluentValidation</div>
+              </div>
+            </div>
+            <span>→</span>
+          </div>
+
+          <div class="arch-flow-arrow">↓</div>
+
+          <div class="arch-step-card" data-layer="layer-domain">
+            <div class="arch-step-left">
+              <span class="arch-step-num">04</span>
+              <div>
+                <div class="arch-step-title">Domain Layer (Enterprise Core)</div>
+                <div class="arch-step-badge">Entities · Value Objects · Rules</div>
+              </div>
+            </div>
+            <span>→</span>
+          </div>
+
+          <div class="arch-flow-arrow">↓</div>
+
+          <div class="arch-step-card" data-layer="layer-infra">
+            <div class="arch-step-left">
+              <span class="arch-step-num">05</span>
+              <div>
+                <div class="arch-step-title">Infrastructure &amp; Persistence</div>
+                <div class="arch-step-badge">EF Core · SQL Server · UnitOfWork</div>
+              </div>
+            </div>
+            <span>→</span>
+          </div>
+        </div>
+
+        <!-- Right: Layer Details Display Panel -->
+        <div class="arch-detail-panel" id="arch-detail-panel">
+          <div class="arch-detail-header">
+            <div class="arch-detail-title" id="arch-panel-title">Client / External Consumer</div>
+            <div class="arch-detail-subtitle" id="arch-panel-subtitle">Entrypoint &bull; HTTPS REST invocation with JWT Auth</div>
+          </div>
+          
+          <p class="arch-detail-desc" id="arch-panel-desc">
+            All inbound traffic enters via secure HTTPS REST endpoints with structured JSON payloads, bearer token authorization headers, and correlation tracking IDs for end-to-end request tracing.
+          </p>
+
+          <div class="arch-tech-tags" id="arch-panel-tags">
+            <span class="arch-tech-pill">HTTPS / REST</span>
+            <span class="arch-tech-pill">Bearer JWT</span>
+            <span class="arch-tech-pill">JSON Contracts</span>
+          </div>
+
+          <div class="arch-code-snippet" id="arch-panel-code">
+            <pre><code>POST /api/v1/orders HTTP/1.1
+Host: api.nexuserp.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
+Content-Type: application/json
+
+{
+  "customerId": "8f3d1b22-92a0-45f8-b3d4",
+  "items": [{ "productId": "104", "quantity": 5 }]
+}</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SHOWCASE SECTION ==================== -->
+    <section id="projects" class="reveal-on-scroll">
+      <header class="section-header">
+        <span class="section-label">// projects</span>
+        <h2 class="section-title">Production-Grade Projects</h2>
+        <p class="section-subtitle">Real-world backend architectures engineered from scratch with clean code and strict separation of concerns.</p>
+      </header>
+
+      <div class="projects-showcase-list">
+        
+        <!-- Project 1: Nexus ERP System -->
+        <article class="project-showcase-card">
+          <div class="project-showcase-main">
+            <div class="project-showcase-header">
+              <h3 class="project-showcase-title">NexusERP — Enterprise Resource Planning Backend</h3>
+            </div>
+            <div class="project-badge-tag">ASP.NET Core 8 · CQRS · MediatR · Clean Architecture · JWT</div>
+            
+            <p class="project-showcase-desc">
+              A modular, production-ready ERP backend system designed to handle complex business processes across inventory, HR, products, and order management. Built strictly according to Clean Architecture guidelines with a zero-coupling core domain.
+            </p>
+
+            <ul class="project-features-list">
+              <li class="project-feature-item">
+                <span class="feature-check">✔</span>
+                <span><strong>CQRS Pipeline:</strong> Decoupled read and write operations via MediatR with pipeline validation behaviors.</span>
+              </li>
+              <li class="project-feature-item">
+                <span class="feature-check">✔</span>
+                <span><strong>Security &amp; Auth:</strong> JWT Bearer Authentication with fine-grained role authorization policies.</span>
+              </li>
+              <li class="project-feature-item">
+                <span class="feature-check">✔</span>
+                <span><strong>Reliable Infrastructure:</strong> Code First EF Core migrations, global exception handling middleware, and server-side pagination.</span>
+              </li>
+              <li class="project-feature-item">
+                <span class="feature-check">✔</span>
+                <span><strong>Documentation:</strong> 100% Swagger documented and comprehensively Postman tested.</span>
+              </li>
+            </ul>
+
+            <div class="project-tech-badges-row">
+              <span class="tech-pill-badge">ASP.NET Core 8</span>
+              <span class="tech-pill-badge">EF Core</span>
+              <span class="tech-pill-badge">MediatR</span>
+              <span class="tech-pill-badge">JWT</span>
+              <span class="tech-pill-badge">FluentValidation</span>
+              <span class="tech-pill-badge">SQL Server</span>
+              <span class="tech-pill-badge">Swagger</span>
+            </div>
+
+            <div class="project-actions-row">
+              <a href="https://github.com/ahmadraafat22/NexusERP" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View NexusERP Repository">
+                <span>View on GitHub</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-showcase-preview">
+            <div class="mockup-api-window">
+              <div class="mockup-header">
+                <span class="mockup-badge-method">SWAGGER API</span>
+                <span>NexusERP.API / v1</span>
+              </div>
+              <div class="mockup-content">
+                <pre><code><span class="c-kw">GET</span>  /api/v1/inventory   <span class="c-str">200 OK</span>
+<span class="c-kw">POST</span> /api/v1/orders      <span class="c-str">201 Created</span>
+<span class="c-kw">GET</span>  /api/v1/hr/staff    <span class="c-str">200 OK</span>
+<span class="c-kw">PUT</span>  /api/v1/products/8  <span class="c-str">204 No Content</span></code></pre>
+              </div>
+              <div class="mockup-stats-bar">
+                <div class="mockup-stat-item">
+                  <div class="mockup-stat-val">28+</div>
+                  <div class="mockup-stat-lbl">Endpoints</div>
+                </div>
+                <div class="mockup-stat-item">
+                  <div class="mockup-stat-val">CQRS</div>
+                  <div class="mockup-stat-lbl">Pattern</div>
+                </div>
+                <div class="mockup-stat-item">
+                  <div class="mockup-stat-val">100%</div>
+                  <div class="mockup-stat-lbl">Tested</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Restaurant E-Commerce -->
+        <article class="project-showcase-card">
+          <div class="project-showcase-main">
+            <div class="project-showcase-header">
+              <h3 class="project-showcase-title">Restaurant E-Commerce — Menu &amp; Order Engine</h3>
+            </div>
+            <div class="project-badge-tag">ASP.NET Core MVC · .NET 8 · EF Core · SQL Server</div>
+            
+            <p class="project-showcase-desc">
+              A comprehensive MVC web application for full restaurant lifecycle management — handling nested categories, recipe products, ingredient inventories, and customer checkout flows with strong database integrity.
+            </p>
+
+            <ul class="project-features-list">
+              <li class="project-feature-item">
+                <span class="feature-check">✔</span>
+                <span><strong>Relational Data Design:</strong> Multi-table normalization with primary/foreign key cascading and integrity constraints.</span>
+              </li>
+              <li class="project-feature-item">
+                <span class="feature-check">✔</span>
+                <span><strong>Layered MVC Architecture:</strong> Clean separation between Razor Views, MVC Controllers, and Repository Data Access.</span>
+              </li>
+              <li class="project-feature-item">
+                <span class="feature-check">✔</span>
+                <span><strong>Admin Management:</strong> Full CRUD operations for menu categories, dietary ingredient tagging, and stock levels.</span>
+              </li>
+            </ul>
+
+            <div class="project-tech-badges-row">
+              <span class="tech-pill-badge">ASP.NET Core MVC</span>
+              <span class="tech-pill-badge">.NET 8</span>
+              <span class="tech-pill-badge">SQL Server</span>
+              <span class="tech-pill-badge">EF Core</span>
+              <span class="tech-pill-badge">Bootstrap</span>
+            </div>
+
+            <div class="project-actions-row">
+              <a href="https://github.com/ahmadraafat22/Resturant-E-Commerce" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Restaurant E-Commerce Repository">
+                <span>View on GitHub</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-showcase-preview">
+            <div class="mockup-api-window">
+              <div class="mockup-header">
+                <span class="mockup-badge-method">DB SCHEMA</span>
+                <span>Entities &amp; Relations</span>
+              </div>
+              <div class="mockup-content">
+                <pre><code>[Categories] 1 &bull;&bull;&bull;&bull;&bull;&bull; N [Products]
+                   |
+                   &bull;&bull;&bull;&bull;&bull;&bull; N [ProductIngredients]
+                                |
+[Ingredients] 1 &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</code></pre>
+              </div>
+              <div class="mockup-stats-bar">
+                <div class="mockup-stat-item">
+                  <div class="mockup-stat-val">MVC</div>
+                  <div class="mockup-stat-lbl">Pattern</div>
+                </div>
+                <div class="mockup-stat-item">
+                  <div class="mockup-stat-val">EF Core</div>
+                  <div class="mockup-stat-lbl">Code First</div>
+                </div>
+                <div class="mockup-stat-item">
+                  <div class="mockup-stat-val">SQL</div>
+                  <div class="mockup-stat-lbl">Normalized</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==================== LEARNING JOURNEY TIMELINE ==================== -->
+    <section id="journey" class="reveal-on-scroll">
+      <header class="section-header">
+        <span class="section-label">// journey</span>
+        <h2 class="section-title">Development &amp; Education Milestones</h2>
+        <p class="section-subtitle">The progression of my technical training, algorithmic discipline, and real-world backend engineering.</p>
+      </header>
+
+      <div class="timeline-container">
+        
+        <!-- Milestone 1 -->
+        <div class="timeline-node">
+          <span class="timeline-bullet"></span>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <h3 class="timeline-title">Minia National University</h3>
+              <span class="timeline-year">2023 – 2027 (Expected)</span>
+            </div>
+            <div class="timeline-subtitle">BSc. Computers &amp; Artificial Intelligence — AI Major</div>
+            <div class="timeline-details">3rd Year &bull; Data Structures, Algorithms, OOP, Database Systems &amp; AI Fundamentals</div>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-node">
+          <span class="timeline-bullet"></span>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <h3 class="timeline-title">Web Fundamentals Training — ITI</h3>
+              <span class="timeline-year">2024</span>
+            </div>
+            <div class="timeline-subtitle">Information Technology Institute</div>
+            <div class="timeline-details">60 Hours of web development foundations, HTTP protocols, JavaScript, and backend integration.</div>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-node">
+          <span class="timeline-bullet"></span>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <h3 class="timeline-title">Competitive Programming &amp; Problem Solving</h3>
+              <span class="timeline-year">2024 – 2025</span>
+            </div>
+            <div class="timeline-subtitle">Codeforces &bull; ICPC Assiut Community</div>
+            <div class="timeline-details">100+ algorithmic problems solved covering binary search, graph traversal, dynamic programming, and complexity analysis.</div>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="timeline-node">
+          <span class="timeline-bullet"></span>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <h3 class="timeline-title">.NET Backend Development Diploma</h3>
+              <span class="timeline-year">2026</span>
+            </div>
+            <div class="timeline-subtitle">Steps Learning</div>
+            <div class="timeline-details">170 Hours of intensive backend engineering: ASP.NET Core, EF Core, CQRS, MediatR, JWT, and Clean Architecture.</div>
+          </div>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="timeline-node">
+          <span class="timeline-bullet"></span>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <h3 class="timeline-title">Next Milestone: Full-Stack .NET Engineer</h3>
+              <span class="timeline-year">In Progress</span>
+            </div>
+            <div class="timeline-subtitle">Expanding System Capabilities</div>
+            <div class="timeline-details">Currently mastering Docker containerization, Redis distributed caching, Angular frontend integration, and Hangfire background jobs.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== GITHUB & ACTIVITY STATS ==================== -->
+    <section id="activity" class="reveal-on-scroll">
+      <header class="section-header">
+        <span class="section-label">// activity</span>
+        <h2 class="section-title">Engineering Activity &amp; Commit Discipline</h2>
+        <p class="section-subtitle">Consistent focus on problem-solving, structured commits, and architectural iterations.</p>
+      </header>
+
+      <div class="activity-grid">
+        
+        <!-- Activity Card 1 -->
+        <div class="activity-card">
+          <div class="activity-card-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>Developer Metrics</span>
+          </div>
+          
+          <div class="github-stats-list">
+            <div class="github-stat-row">
+              <span class="github-stat-key">Primary Focus:</span>
+              <span class="github-stat-val accent">ASP.NET Core &amp; Clean Architecture</span>
+            </div>
+            <div class="github-stat-row">
+              <span class="github-stat-key">Dedicated Training Hours:</span>
+              <span class="github-stat-val">170+ Hours</span>
+            </div>
+            <div class="github-stat-row">
+              <span class="github-stat-key">Algorithmic Problems Solved:</span>
+              <span class="github-stat-val">100+ Problems</span>
+            </div>
+            <div class="github-stat-row">
+              <span class="github-stat-key">Repository Host:</span>
+              <span class="github-stat-val">github.com/ahmadraafat22</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity Card 2 -->
+        <div class="activity-card">
+          <div class="activity-card-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <span>Commit Matrix Simulation</span>
+          </div>
+
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 12px;">
+            Structured Git branching, semantic commit conventions, and continuous project delivery.
+          </p>
+
+          <div class="commit-grid-sim" aria-hidden="true">
+            <div class="commit-cell l-2"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-1"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-2"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-1"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-2"></div>
+
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-1"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-2"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-1"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-2"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-4"></div>
+
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-2"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-2"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-1"></div>
+            <div class="commit-cell l-3"></div>
+            <div class="commit-cell l-4"></div>
+            <div class="commit-cell l-4"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION (TERMINAL + FORM) ==================== -->
+    <section id="contact" class="reveal-on-scroll">
+      <header class="section-header">
+        <span class="section-label">// contact</span>
+        <h2 class="section-title">Let's Build Something Robust</h2>
+        <p class="section-subtitle">I'm actively open to backend engineering roles, collaborations, and architectural discussions.</p>
+      </header>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Terminal Contact Window -->
+        <div class="terminal-contact-card">
+          <div class="terminal-contact-header">
+            <div class="window-controls">
+              <span class="control-dot red"></span>
+              <span class="control-dot yellow"></span>
+              <span class="control-dot green"></span>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">bash &bull; connect.sh</span>
+          </div>
+
+          <div class="terminal-contact-body">
+            <div class="terminal-prompt">$ connect --developer "ahmed-raafat"</div>
+            <div class="terminal-info-line">&gt; Name: <span class="terminal-info-val">Ahmed Raafat</span></div>
+            <div class="terminal-info-line">&gt; Role: <span class="terminal-info-val">Backend .NET Developer</span></div>
+            <div class="terminal-info-line">&gt; Location: <span class="terminal-info-val">Egypt</span></div>
+            <div class="terminal-info-line">&gt; Status: <span class="terminal-info-val" style="color:#10B981;">Ready for new opportunities</span></div>
+            
+            <div class="terminal-cta-statement">
+              &gt; "Clean Architecture is not an afterthought; it's the foundation."
+            </div>
+
+            <div class="contact-channels-list">
+              <button class="contact-chan-btn" id="copy-email-btn" data-email="medorfmedo8008@gmail.com" aria-label="Copy email address">
+                <span>medorfmedo8008@gmail.com</span>
+                <span id="copy-status" style="color: var(--accent); font-size: 11px;">[copy email]</span>
+              </button>
+
+              <a href="https://linkedin.com/in/ahmed-raafat-8a1a2a286" target="_blank" rel="noopener noreferrer" class="contact-chan-btn">
+                <span>LinkedIn Profile</span>
+                <span>↗</span>
+              </a>
+
+              <a href="https://github.com/ahmadraafat22" target="_blank" rel="noopener noreferrer" class="contact-chan-btn">
+                <span>GitHub Profile</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Modern Message Form -->
+        <div class="contact-form-panel">
+          <h3 class="form-title">Send a Direct Message</h3>
+          <p class="form-subtitle">Have a project, job opportunity, or technical inquiry? Send a message directly.</p>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Your Name</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. John Smith" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-email">Your Email</label>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g. john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-message">Message</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project or backend requirements..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn" id="form-submit-btn">
+              <span>Send Message</span>
+            </button>
+            <div class="form-response-msg" id="form-response-msg">
+              ✓ Message received! Thank you, I will get back to you shortly.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <div class="footer-content">
+        <div>
+          <span class="footer-brand">Ahmed Raafat</span>
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-top: 2px;">
+            Backend .NET Developer &bull; Clean Architecture &bull; CQRS
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://github.com/ahmadraafat22" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+          <a href="https://linkedin.com/in/ahmed-raafat-8a1a2a286" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+          <a href="mailto:medorfmedo8008@gmail.com" class="footer-link">Email</a>
+        </div>
+
+        <span class="footer-copy">© 2026 Ahmed Raafat. Built with precision.</span>
+      </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
