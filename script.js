@@ -1,7 +1,10 @@
 /**
  * Ahmed Raafat — Senior Backend .NET Developer Portfolio
- * Interactivity: Code Workstation Tabs, Architecture Explorer,
- * Copy Clipboard, Form Feedback, Active Nav & Scroll Reveals
+ * Interactivity Controller:
+ * - Responsive Navigation (Visible on PC & Wide Screens, Clean Drawer on Phones)
+ * - Hero Workstation Tabs
+ * - Interactive Backend Architecture Explorer with Mobile Smart Scroll
+ * - Clipboard Copy, Form Handling, Scroll Reveals & Scroll-to-Top
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -134,6 +137,7 @@ public async Task<IActionResult> CreateOrder(
 
 function initArchitectureExplorer() {
   const stepCards = document.querySelectorAll('.arch-step-card');
+  const panelEl = document.getElementById('arch-detail-panel');
   const titleEl = document.getElementById('arch-panel-title');
   const subtitleEl = document.getElementById('arch-panel-subtitle');
   const descEl = document.getElementById('arch-panel-desc');
@@ -152,7 +156,7 @@ function initArchitectureExplorer() {
       stepCards.forEach(c => c.classList.remove('active'));
       card.classList.add('active');
 
-      // Update panel content with smooth animation
+      // Update panel content
       titleEl.textContent = data.title;
       subtitleEl.innerHTML = data.subtitle;
       descEl.textContent = data.desc;
@@ -162,6 +166,13 @@ function initArchitectureExplorer() {
 
       // Update code
       codeEl.innerHTML = `<pre><code>${escapeHtml(data.code)}</code></pre>`;
+
+      // On mobile / tablet viewports, smoothly scroll to detail panel so user sees the change
+      if (window.innerWidth <= 820 && panelEl) {
+        const yOffset = -70;
+        const y = panelEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     });
   });
 }
@@ -274,7 +285,7 @@ function initScrollReveals() {
 }
 
 /**
- * 6. Active Nav Link on Scroll
+ * 6. Active Nav Synchronizer
  */
 function initActiveNav() {
   const sections = document.querySelectorAll('section[id]');
@@ -285,12 +296,13 @@ function initActiveNav() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        navLinks.forEach(link => link.classList.remove('active'));
-        const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-        if (active) active.classList.add('active');
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+        });
       }
     });
-  }, { threshold: 0.35 });
+  }, { threshold: 0.25 });
 
   sections.forEach(section => observer.observe(section));
 }
@@ -312,24 +324,65 @@ function initScrollTop() {
 }
 
 /**
- * 8. Mobile Hamburger Navigation
+ * 8. Mobile Navigation Drawer & Hamburger Controller
  */
 function initMobileNav() {
   const hamburger = document.getElementById('nav-hamburger');
-  const navLinksList = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinksList = document.getElementById('nav-links');
+  const backdrop = document.getElementById('nav-backdrop');
+  const allNavLinks = navLinksList ? navLinksList.querySelectorAll('a') : [];
 
   if (!hamburger || !navLinksList) return;
 
+  function openMenu() {
+    navLinksList.classList.add('open');
+    if (backdrop) backdrop.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('nav-locked');
+  }
+
+  function closeMenu() {
+    navLinksList.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('nav-locked');
+  }
+
+  // Toggle on hamburger button click
   hamburger.addEventListener('click', () => {
-    const isOpen = navLinksList.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    const isOpen = navLinksList.classList.contains('open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
-  navLinks.forEach(link => {
+  // Close when clicking any link inside the navigation drawer
+  allNavLinks.forEach(link => {
     link.addEventListener('click', () => {
-      navLinksList.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
+      closeMenu();
     });
   });
+
+  // Close when tapping backdrop
+  if (backdrop) {
+    backdrop.addEventListener('click', () => {
+      closeMenu();
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinksList.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+
+  // Reset state when resizing beyond mobile breakpoint
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 820 && navLinksList.classList.contains('open')) {
+      closeMenu();
+    }
+  }, { passive: true });
 }
